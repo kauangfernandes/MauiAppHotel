@@ -7,27 +7,27 @@
              BackgroundColor="{StaticResource Gray100}">
     
     <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
-        <Label Text="Suite Super Luxo" 
+        <Label Text="{Binding QuartoSelecionado.Descricao}" 
                TextColor="{StaticResource Primary}"
                FontSize="50"/>
 
         <Frame Margin="10">
-            <HorizontalStackLayout >
+            <StackLayout Orientation="Horizontal">
                 
-                <HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Adultos: " />
-                    <Label Text="2"
+                    <Label Text="{Binding QntAdultos}"
                            TextColor="{StaticResource Primary}" />
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Crianças : " />
-                    <Label Text="2"
+                    <Label Text="{Binding QntCriancas}"
                            TextColor="{StaticResource Primary}" />
 
                 </HorizontalStackLayout>
                 
-            </HorizontalStackLayout>
+            </StackLayout>
         </Frame>
 
         <Frame Margin="10">
@@ -36,20 +36,31 @@
                 <Label Grid.Row="0" Grid.Column="1" Text="Check-out: " />
                 <Label Grid.Row="0" Grid.Column="2" Text="Estadia: " />
 
-                <Label Grid.Row="1" Grid.Column="0" Text="27/11/2024" />
-                <Label Grid.Row="1" Grid.Column="1" Text="30/11/2024: " />
-                <Label Grid.Row="1" Grid.Column="2" Text="2" />
+                <Label Grid.Row="1" Grid.Column="0" 
+                       Text="{Binding DataCheckIn, StringFormat='{}{0:dd/ MM/ yyyy}'}" 
+                       TextColor="{StaticResource Primary}"/>
+                
+                <Label Grid.Row="1" Grid.Column="1" 
+                       Text="{Binding DataCheckOut, StringFormat='{}{0:dd/ MM/ yyyy}'}"
+                       TextColor="{StaticResource Primary}"/>
+                <Label Grid.Row="1" Grid.Column="2" 
+                       Text="{Binding Estadias}" />
             </Grid>
         </Frame>
 
         <Frame Margin="10">
             <HorizontalStackLayout>
                 <Label Text="Valor total: R$" />
-                <Label Text="1.000,00" />
+                <Label Text="{Binding ValorTotal, StringFormat='{}{0:C}'}"
+                       TextColor="{StaticResource Primary}"/>
             </HorizontalStackLayout>
         </Frame>
 
-        <Button Text="Voltar" Clicked="Button_Clicked" HorizontalOptions="Center"/>
+        <Button Text="Voltar" 
+                Clicked="Button_Clicked" 
+                HorizontalOptions="Center"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="{StaticResource White}"/>
 
     </VerticalStackLayout>
 </ContentPage>
