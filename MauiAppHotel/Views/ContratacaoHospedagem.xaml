@@ -87,7 +87,8 @@
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar" Clicked="Button_Clicked"   />
+                <Button Text="Avançar" Clicked="Button_Clicked"   Margin="0, 0, 0, 2"/>
+                <Button Text="Ver suas simulações" Clicked="Button_Clicked_1" Margin="0, 2, 0, 0"/>
 
             </VerticalStackLayout>
         </Frame>

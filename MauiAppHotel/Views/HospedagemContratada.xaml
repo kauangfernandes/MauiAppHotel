@@ -50,7 +50,7 @@
 
         <Frame Margin="10">
             <HorizontalStackLayout>
-                <Label Text="Valor total: R$" />
+                <Label Text="Valor total: " />
                 <Label Text="{Binding ValorTotal, StringFormat='{}{0:C}'}"
                        TextColor="{StaticResource Primary}"/>
             </HorizontalStackLayout>
@@ -58,9 +58,14 @@
 
         <Button Text="Voltar" 
                 Clicked="Button_Clicked" 
-                HorizontalOptions="Center"
                 BackgroundColor="{StaticResource Primary}"
-                TextColor="{StaticResource White}"/>
+                TextColor="{StaticResource White}"
+                Margin="0, 0, 0, 2"/>
+
+        <Button Text="Salvar Simutacao" Clicked="Button_Clicked_1" 
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="{StaticResource White}" 
+                Margin="0, 3, 0, 0"/>
 
     </VerticalStackLayout>
 </ContentPage>
