@@ -7,7 +7,7 @@
              BackgroundColor="{StaticResource Gray100}">
     
     <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
-        <Label Text="{Binding QuartoSelecionado.Descricao}" 
+        <Label x:Name="quarto_selecionado" Text="{Binding QuartoSelecionado.Descricao}" 
                TextColor="{StaticResource Primary}"
                FontSize="50"/>
 
@@ -16,13 +16,13 @@
                 
                 <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Adultos: " />
-                    <Label Text="{Binding QntAdultos}"
+                    <Label x:Name="qnt_adultos"  Text="{Binding QntAdultos}"
                            TextColor="{StaticResource Primary}" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Crianças : " />
-                    <Label Text="{Binding QntCriancas}"
+                    <Label x:Name="qnt_criancas" Text="{Binding QntCriancas}"
                            TextColor="{StaticResource Primary}" />
 
                 </HorizontalStackLayout>
@@ -36,14 +36,19 @@
                 <Label Grid.Row="0" Grid.Column="1" Text="Check-out: " />
                 <Label Grid.Row="0" Grid.Column="2" Text="Estadia: " />
 
-                <Label Grid.Row="1" Grid.Column="0" 
-                       Text="{Binding DataCheckIn, StringFormat='{}{0:dd/ MM/ yyyy}'}" 
+                <Label x:Name="check_in" 
+                       Grid.Row="1" Grid.Column="0" 
+                       Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" 
                        TextColor="{StaticResource Primary}"/>
                 
-                <Label Grid.Row="1" Grid.Column="1" 
-                       Text="{Binding DataCheckOut, StringFormat='{}{0:dd/ MM/ yyyy}'}"
+                <Label x:Name="check_out" 
+                       Grid.Row="1" 
+                       Grid.Column="1" 
+                       Text="{Binding DataCheckOut}"
                        TextColor="{StaticResource Primary}"/>
-                <Label Grid.Row="1" Grid.Column="2" 
+                <Label x:Name="estadias" 
+                       Grid.Row="1" 
+                       Grid.Column="2" 
                        Text="{Binding Estadias}" />
             </Grid>
         </Frame>
@@ -51,7 +56,7 @@
         <Frame Margin="10">
             <HorizontalStackLayout>
                 <Label Text="Valor total: " />
-                <Label Text="{Binding ValorTotal, StringFormat='{}{0:C}'}"
+                <Label x:Name="valor_total" Text="{Binding ValorTotal, StringFormat='{}{0:C}'}"
                        TextColor="{StaticResource Primary}"/>
             </HorizontalStackLayout>
         </Frame>

@@ -42,7 +42,7 @@ public partial class ContratacaoHospedagem : ContentPage
 				DataCheckOut = dtpck_checkout.Date
 			};
 
-			await Navigation.PushAsync(new HospedagemContratada()
+			await Navigation.PushAsync(new HospedagemContratada(hospedagem: h)
 			{
 				BindingContext = h
 			});

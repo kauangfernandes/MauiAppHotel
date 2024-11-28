@@ -73,10 +73,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Views\Simulacao.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
